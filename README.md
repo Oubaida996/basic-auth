@@ -23,3 +23,6 @@ router.get('/users')
     "pwd": "test"
     
   }
+  
+  ## UML  
+  ![uml](./assets/basic-auth-phase1.jpg)
