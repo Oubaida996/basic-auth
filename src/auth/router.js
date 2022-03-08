@@ -47,13 +47,16 @@ async function signIn(req, res) {
 
         try {
             let user = await Users.findOne({ where: { userName: username } });
+            // console.log("ddddddddddddddd",user);
             const valid = await bcrybt.compare(password, user.pwd);
-            if (valid) {
+            
+            if (valid)   {
                 res.status(200).json({ username: username })
             } else {
-                res.send('user is not valid')
+                res.send('password is not corect');
             }
         } catch (error) {
+            res.send('user is not valid');
             console.log(`Error from signIp function in router file ${error}`);
         }
 

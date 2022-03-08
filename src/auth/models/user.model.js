@@ -12,6 +12,7 @@ const Users = () => db.define('users',
 
     pwd: {
         type: DataTypes.STRING,
+        allowNull: false
     }
 
 
